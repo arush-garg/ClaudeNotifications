@@ -12,3 +12,4 @@ MCP server should inject instructions to flash code to the microcontroller when 
 Behavior:
 1. Tool that claude can call to send a notification to the HardwareBridge. It beeps 3 times and displays a message on the OLED screen for 1 minute (both the beep count and display time should be configurable in config.json).
 2. Pre tool hook for clarify (and the ask for permission pop up if possible)
+    FOr now I'll stick to just Claude and maybe in the future others can implement the hooks for other agents.

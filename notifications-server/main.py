@@ -79,7 +79,7 @@ def send_notification(message, beeps=3, duration=60):
     json_data["duration"] = max(1, min(300, duration))
     data = f"{json.dumps(json_data)}\n".encode()
     port.write(data)
-    port.reset_output_buffer()
+    port.flush()
     return {"status": "ok", "msg": "notification sent", "beeps": json_data["beeps"], "duration": json_data["duration"]}
 
 
@@ -125,7 +125,7 @@ def flash_firmware(port=None):
                 test_msg["beeps"] = 3
                 test_msg["duration"] = 60
                 port.write(f"{json.dumps(test_msg)}\n".encode())
-                port.reset_output_buffer()
+                port.flush()
                 time.sleep(1.0)
                 return {"status": "ok", "msg": "firmware flashed successfully, notification sent"}
             except Exception as exc:

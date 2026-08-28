@@ -25,6 +25,8 @@ bool initDisplay() {
   display.clearDisplay();
   display.setTextSize(TEXT_SIZE);
   display.setTextColor(TEXT_COLOR);
+  display.setCursor(0, 0);
+  display.display();
   return true;
 }
 
@@ -53,7 +55,7 @@ void displayText(const char* text) {
         if (line < maxLines) {
           uint8_t need = bufIdx + 1; // word + space
           if (col + need > maxCharsPerLine) {
-            display.println(buf);
+            display.println();
             line++;
             col = 0;
           }
