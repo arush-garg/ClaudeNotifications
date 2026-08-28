@@ -1,0 +1,12 @@
+{
+    "baud_rate": 9600,
+    "screen_width": 128,
+    "screen_height": 32,
+    "text_size": 1,
+    "text_color": "white",
+    "num_beeps": 3,
+    "notification_duration": 60,
+    "buzzer_pin": 9,
+    "button_pin": 12,
+    "serial_port": "/dev/cu.usbmodem2101"
+}
